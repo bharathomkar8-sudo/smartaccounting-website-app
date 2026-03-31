@@ -1,71 +1,98 @@
 body {
-  font-family: Arial;
-  background: #f5f6f8;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f9;
   display: flex;
 }
 
 /* Sidebar */
 .sidebar {
-  width: 250px;
-  background: white;
+  width: 260px;
+  background: #ffffff;
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
   height: 100vh;
 }
 
-/* Right content */
-.main {
-  flex: 1;
-  padding: 20px;
+.sidebar h2 {
+  margin-bottom: 20px;
 }
 
 /* Menu */
 .item, .title {
   padding: 10px;
-  margin: 5px 0;
-  cursor: pointer;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .item:hover, .title:hover {
-  background: #f0f0f0;
+  background: #f1f5f9;
 }
 
-/* Active main menu */
+/* Active */
 .active {
   background: #0f766e;
   color: white;
   font-weight: bold;
 }
 
-/* Dropdown items */
+/* Dropdown */
 .sub {
   display: none;
-  padding-left: 20px;
-  border-left: 2px solid #ddd;
-  margin-left: 10px;
+  padding-left: 15px;
 }
 
-/* Dot style */
 .sub div {
   padding: 6px;
   font-size: 14px;
-  position: relative;
+  color: #555;
 }
 
-.sub div::before {
-  content: "•";
-  color: #0f766e;
-  margin-right: 8px;
-}
-
-/* Show dropdown */
 .dropdown.open .sub {
   display: block;
 }
 
 /* Disabled */
 .disabled {
-  color: gray;
+  color: #aaa;
   pointer-events: none;
+}
+
+/* RIGHT SIDE */
+.main {
+  flex: 1;
+  padding: 30px;
+}
+
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  color: white;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.hero h1 {
+  margin: 0;
+}
+
+.hero p {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
