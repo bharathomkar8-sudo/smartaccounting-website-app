@@ -1,94 +1,50 @@
-<body>
+body {
+  font-family: Arial;
+  background: #f5f6f8;
+}
 
-<div class="sidebar">
-  <h2>SmartFlow</h2>
+.sidebar {
+  width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+}
 
-  <div class="menu">
+h2 {
+  margin-bottom: 20px;
+}
 
-    <div class="item active">Dashboard</div>
+.item, .title {
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 8px;
+}
 
-    <div class="dropdown">
-      <div class="title">Sales</div>
-      <div class="sub">
-        <div>• Omkar Sale Upload</div>
-        <div>• Spot Sale Upload</div>
-        <div>• ARS Sale Upload</div>
-      </div>
-    </div>
+.item:hover, .title:hover {
+  background: #f0f0f0;
+}
 
-    <div class="dropdown">
-      <div class="title">Purchase</div>
-      <div class="sub">
-        <div>• Purchase Entry</div>
-        <div>• Journal Non-GST</div>
-      </div>
-    </div>
+.active {
+  background: #0f766e;
+  color: white;
+}
 
-    <div class="dropdown">
-      <div class="title">Payments</div>
-      <div class="sub">
-        <div>• Omkar Payments</div>
-        <div>• ARS Payments</div>
-      </div>
-    </div>
+.disabled {
+  color: gray;
+  pointer-events: none;
+}
 
-    <div class="dropdown">
-      <div class="title">Reimbursement</div>
-      <div class="sub">
-        <div>• Omkar Reimbursement</div>
-        <div>• ARS Reimbursement</div>
-        <div>• Spot Reimbursement</div>
-        <div>• Single Entry</div>
-      </div>
-    </div>
+.sub {
+  display: none;
+  padding-left: 15px;
+}
 
-    <div class="item disabled">Reco (Coming Soon)</div>
+.sub div {
+  padding: 8px;
+  font-size: 14px;
+}
 
-    <div class="item">Processing Status</div>
-
-    <div class="dropdown">
-      <div class="title">Party Mapping</div>
-      <div class="sub">
-        <div>• Customer</div>
-        <div>• Vendor</div>
-      </div>
-    </div>
-
-    <div class="item">Reports</div>
-    <div class="item">Error Logs</div>
-    <div class="item">Settings</div>
-    <div class="item">Help</div>
-
-  </div>
-</div>
-
-<div class="main">
-
-  <!-- HERO -->
-  <div class="hero">
-    <h1>Smart Accounting Dashboard</h1>
-    <p>Automate your work. Focus on smart decisions, not manual tasks.</p>
-  </div>
-
-  <!-- CARDS -->
-  <div class="cards">
-    <div class="card">
-      <h3>Total Uploads</h3>
-      <p>120</p>
-    </div>
-
-    <div class="card">
-      <h3>Processed</h3>
-      <p>95</p>
-    </div>
-
-    <div class="card">
-      <h3>Errors</h3>
-      <p>5</p>
-    </div>
-  </div>
-
-</div>
-
-<script src="script.js"></script>
-</body>
+.dropdown.open .sub {
+  display: block;
+}
